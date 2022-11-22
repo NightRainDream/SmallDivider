@@ -40,6 +40,7 @@ public class SmallItemDecoration extends RecyclerView.ItemDecoration {
         mPaint.setStrokeWidth(mItemDecorationWidth);
         mPaint.setColor(mItemDecorationWidthColor);
         mPaint.setStyle(Paint.Style.FILL_AND_STROKE);
+        mPaint.setAntiAlias(true);
     }
 
     @Override
