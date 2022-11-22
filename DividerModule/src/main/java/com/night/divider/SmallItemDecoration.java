@@ -46,7 +46,7 @@ public class SmallItemDecoration extends RecyclerView.ItemDecoration {
     @Override
     public void getItemOffsets(@NonNull Rect outRect, @NonNull View view, @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
         super.getItemOffsets(outRect, view, parent, state);
-        if (mItemDecorationWidth < 0) {
+        if (mItemDecorationWidth <= 0) {
             return;
         }
         RecyclerView.LayoutManager mLayoutManager = parent.getLayoutManager();
@@ -84,7 +84,7 @@ public class SmallItemDecoration extends RecyclerView.ItemDecoration {
     @Override
     public void onDraw(@NonNull Canvas c, @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
         super.onDraw(c, parent, state);
-        if (mItemDecorationWidthColor == Color.TRANSPARENT) {
+        if (mItemDecorationWidthColor == Color.TRANSPARENT || mItemDecorationWidth <= 0) {
             return;
         }
         RecyclerView.LayoutManager mLayoutManager = parent.getLayoutManager();
